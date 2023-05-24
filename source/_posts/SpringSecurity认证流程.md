@@ -2,8 +2,8 @@
 title: SpringSecurity认证流程
 date: '2022/9/14 21:42'
 swiper: true
-swiperImg: 'https://zangzang.oss-cn-beijing.aliyuncs.com/img/wallhaven-8o2v82.jpg'
-img: 'https://zangzang.oss-cn-beijing.aliyuncs.com/img/wallhaven-8o2v82.jpg'
+cover: https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-q28wgl.png
+img: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-q28wgl.png'
 categories: 源码
 tags:
   - 安全框架

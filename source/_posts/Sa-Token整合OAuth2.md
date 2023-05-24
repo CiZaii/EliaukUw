@@ -2,8 +2,8 @@
 title: Sa-Token整合OAuth2
 date: '2022/9/19 19:28'
 swiper: false
-swiperImg: 'https://zangzang.oss-cn-beijing.aliyuncs.com/img/wallhaven-v97wl5.png'
-img: 'https://zangzang.oss-cn-beijing.aliyuncs.com/img/wallhaven-v97wl5.png'
+cover: https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-72kejo.jpg
+img: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-72kejo.jpg'
 categories: 第三方登录
 tags:
   - OAuth2

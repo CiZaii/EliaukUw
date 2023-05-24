@@ -2,10 +2,10 @@
 title: Lambda表达式也能写递归吗
 date: '2022/8/26 23:12'
 swiper: true
-swiperImg: >-
-  https://zangzang.oss-cn-beijing.aliyuncs.com/img/b326474acb2e57f6b5dedf7fddf403a0.jpg
+cover: >-
+ https://zang-1307996497.cos.ap-beijing.myqcloud.com/6E751678A13E9E9F6A6A410DA02683FF.jpg
 img: >-
-  https://zangzang.oss-cn-beijing.aliyuncs.com/img/b326474acb2e57f6b5dedf7fddf403a0.jpg
+ https://zang-1307996497.cos.ap-beijing.myqcloud.com/6E751678A13E9E9F6A6A410DA02683FF.jpg
 categories: 开源
 
 tags:

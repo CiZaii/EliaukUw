@@ -2,8 +2,8 @@
 title: spring-websocket实现聊天室功能
 date: '2022/9/8 22:48'
 swiper: true
-swiperImg: 'https://zangzang.oss-cn-beijing.aliyuncs.com/img/wallhaven-57o7o1.jpg'
-img: 'https://zangzang.oss-cn-beijing.aliyuncs.com/img/wallhaven-57o7o1.jpg'
+cover: https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-e71de8.jpg
+img: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-e71de8.jpg'
 categories: WebSocket
 tags:
   - spring

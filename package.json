@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@upupming/hexo-renderer-markdown-it-plus": "^2.0.2",
+    "cheerio": "^1.0.0-rc.12",
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
     "hexo": "^6.2.0",
@@ -45,6 +46,7 @@
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^3.0.0",
     "hexo-tag-aplayer": "^3.0.4",
+    "hexo-tag-echarts": "^1.0.0",
     "hexo-tag-map": "^1.2.0",
     "hexo-theme-volantis": "^5.7.1",
     "hexo-wordcount-fomal": "^1.0.0",

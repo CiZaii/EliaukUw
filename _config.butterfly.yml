@@ -543,7 +543,7 @@ tag_ui: # 留空或 index
 # "#e4f4f6" "#efefef"
 background:
   #【必选】默认背景 
-  default: var(--default-bg)
+  default: url(https://zang-1307996497.cos.ap-beijing.myqcloud.com/dm1.jpg)
   #【可选】PC端夜间模式背景 
   darkmode: var(--darkmode-bg)
   #【可选】移动端日间默认背景 
@@ -552,7 +552,7 @@ background:
   mobilenight: var(--mobilenight-bg)
 
 # Footer Background
-footer_bg: false
+footer_bg: true
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:
@@ -904,6 +904,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+    - <script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script>
     # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"> # 常规css
     - <link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"> # 引入组件库(f12)
     # 综合美化模块样式引入

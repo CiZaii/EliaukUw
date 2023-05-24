@@ -2,10 +2,10 @@
 title: MVCC底层原理
 date: '2022/8/26 18:22'
 swiper: true
-swiperImg: >-
-  https://zangzang.oss-cn-beijing.aliyuncs.com/img/eeb95678d9e0d7ad4c7bd6aa6e503216.jpg
+cover: >-
+ https://zang-1307996497.cos.ap-beijing.myqcloud.com/7DC8B537E66A6DA5150D7C5B7EB4EDAB.jpg
 img: >-
-  https://zangzang.oss-cn-beijing.aliyuncs.com/img/eeb95678d9e0d7ad4c7bd6aa6e503216.jpg
+ https://zang-1307996497.cos.ap-beijing.myqcloud.com/7DC8B537E66A6DA5150D7C5B7EB4EDAB.jpg
 categories: MySQL
 tags:
   - 锁

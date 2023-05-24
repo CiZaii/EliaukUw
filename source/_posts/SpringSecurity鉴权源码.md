@@ -2,10 +2,10 @@
 title: SpringSecurity鉴权源码
 date: '2022/9/16 19:04'
 swiper: true
-swiperImg: >-
-  https://zangzang.oss-cn-beijing.aliyuncs.com/img/391c44cd9190562f87f20329d2eb371.jpg
+cover: >-
+ https://zang-1307996497.cos.ap-beijing.myqcloud.com/7d5a3c1679ae42fbbb6d626c0b01f1bb.jpg
 img: >-
-  https://zangzang.oss-cn-beijing.aliyuncs.com/img/391c44cd9190562f87f20329d2eb371.jpg
+ https://zang-1307996497.cos.ap-beijing.myqcloud.com/7d5a3c1679ae42fbbb6d626c0b01f1bb.jpg
 categories: 源码
 tags:
   - 安全框架
