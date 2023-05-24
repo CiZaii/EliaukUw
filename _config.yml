@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Fomalhaut🥝
+title: Eliauk
 subtitle: 
 description: 'Future is now 🍭🍭🍭'
-keywords: 'Java,MySQL,算法,代码,博客,Butterfly,Hexo,Fomalhaut🥝,Fomalhaut'
-author: Fomalhaut🥝
+keywords: 'Java,MySQL,算法,代码,博客,Butterfly,Hexo,Eliauk'
+author: Eliauk
 language: zh-CN
 timezone: ''
 
@@ -18,7 +18,7 @@ abbrlink:
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://www.fomal.cc/
+url: https://eliauku.gitee.io/
 permalink: posts/:abbrlink.html
 permalink_defaults:
 pretty_urls:
@@ -264,7 +264,7 @@ plugins:
 
 # 小冰分类磁贴
 magnet:
-  enable: true
+  enable: false
   priority: 2
   enable_page: /
   type: categories

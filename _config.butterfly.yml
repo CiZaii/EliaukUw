@@ -8,26 +8,26 @@ menu:
     归档: /archives/ || icon-guidang1 || faa-tada
     标签: /tags/ || icon-sekuaibiaoqian || faa-tada
     分类: /categories/ || icon-fenlei || faa-tada
-  休闲 || icon-pinweishenghuo || faa-tada || hide:
-    八音盒: /life/music/ ||icon-yinle || faa-tada
-    影院: /life/movies/ ||icon-dianying1 || faa-tada
-    游戏: /life/games/ || icon-youxishoubing || faa-tada
-  八宝箱 || icon-xiangzi || faa-tada || hide:
-    画廊: /box/gallery/ ||icon-tubiaozhizuomoban || faa-tada
-    动画: /box/animation/ || icon-nvwumao || faa-tada
-    网址导航: /box/nav/ || icon-zhifengche || faa-tada
-  社交 || icon-shejiaoxinxi || faa-tada || hide:
-    朋友圈: /social/fcircle/ || icon-pengyouquan || faa-tada
-    留言板: /comments/ || icon-liuyan || faa-tada
-    友人帐: /social/link/ || icon-lianjie || faa-tada
-  网站 || icon-wangye || faa-tada || hide:
-    网站统计: /site/census/ || icon--tongjibiao || faa-tada
-    文章统计: /site/echarts/ || icon-shujutongji1 || faa-tada
-    旧时光: /site/time/ || icon-xianxingshalou || faa-tada
-  个人 || icon-maoliang || faa-tada || hide:
-    唠叨: /personal/bb/ || icon-qunliaotian || faa-tada
-    恋爱小屋: /personal/love/ || icon-love-sign || faa-tada
-    关于: /personal/about/ || icon-paperplane || faa-tada
+  #休闲 || icon-pinweishenghuo || faa-tada || hide:
+  #  八音盒: /life/music/ ||icon-yinle || faa-tada
+  #  影院: /life/movies/ ||icon-dianying1 || faa-tada
+  #  游戏: /life/games/ || icon-youxishoubing || faa-tada
+  #八宝箱 || icon-xiangzi || faa-tada || hide:
+  #  画廊: /box/gallery/ ||icon-tubiaozhizuomoban || faa-tada
+  #  动画: /box/animation/ || icon-nvwumao || faa-tada
+  #  网址导航: /box/nav/ || icon-zhifengche || faa-tada
+  #社交 || icon-shejiaoxinxi || faa-tada || hide:
+  #  朋友圈: /social/fcircle/ || icon-pengyouquan || faa-tada
+  #  留言板: /comments/ || icon-liuyan || faa-tada
+  #  友人帐: /social/link/ || icon-lianjie || faa-tada
+  #网站 || icon-wangye || faa-tada || hide:
+  #  网站统计: /site/census/ || icon--tongjibiao || faa-tada
+  #  文章统计: /site/echarts/ || icon-shujutongji1 || faa-tada
+  #  旧时光: /site/time/ || icon-xianxingshalou || faa-tada
+  #个人 || icon-maoliang || faa-tada || hide:
+  #  唠叨: /personal/bb/ || icon-qunliaotian || faa-tada
+  #  恋爱小屋: /personal/love/ || icon-love-sign || faa-tada
+  #  关于: /personal/about/ || icon-paperplane || faa-tada
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -53,9 +53,9 @@ copy:
 social:
   # Github: https://github.com/fomalhaut1998 || icon-github || faa-tada
   微信: /assets/QRCode.jpg || icon-weixin || faa-tada
-  QQ: https://res.abeim.cn/api/qq/?qq=1174008660 || icon-QQ || faa-tada
-  B站: https://space.bilibili.com/220757832 || icon-bilibili || faa-tada
-  QQ邮箱: mailto:1174008660@qq.com || icon-youxiang || faa-tada
+  QQ: https://res.abeim.cn/api/qq/?qq=2556450572 || icon-QQ || faa-tada
+  B站: https://space.bilibili.com/33068730 || icon-bilibili || faa-tada
+  QQ邮箱: mailto:2556450572@qq.com || icon-youxiang || faa-tada
   力扣: https://leetcode.cn/u/fomalhaut1998 || icon-leetcode || faa-tada
   # 微博: https://weibo.com/u/6473136435 || icon-weibo || faa-tada
   # 知乎: https://www.zhihu.com/people/liang-jia-chao-19 || icon-shejiaotubiao-10 || faa-tada
@@ -113,7 +113,7 @@ favicon:
 
 # Avatar (頭像)
 avatar:
-  img: https://tuchuang.voooe.cn/images/2023/01/02/avatar.webp
+  img: https://zang-1307996497.cos.ap-beijing.myqcloud.com/db0937b99413d1e464d1d5cfa45dc5f.jpg
   effect: false
 
 # Disable all banner image
@@ -668,11 +668,11 @@ subtitle:
   # source: 2  調用一句網（簡體） http://yijuzhan.com/
   # source: 3  調用今日詩詞（簡體） https://www.jinrishici.com/
   # subtitle 會先顯示 source , 再顯示 sub 的內容
-  source: false
+  source: 2
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
   sub:
-    - "Welcome to Fomalhaut🥝のTiny Home!🤣🤣🤣"
-    - "Hope you have a nice day!🍭🍭🍭"
+    - "Welcome to EliaukのTiny Home!🤣🤣🤣"
+    - "栀子比众木 人间诚未多!🍭🍭🍭"
 
 # Loading Animation (加載動畫)
 # preloader: false
@@ -702,10 +702,10 @@ aside:
       enable: true
       icon: # fab fa-github
       text: 前往小窝
-      link: https://github.com/fomalhaut1998
+      link: https://gitee.com/EliaukU
   card_announcement:
     enable: true
-    content: <center><b>--- 主域名 ---<br><a href="https://www.fomal.cc" title="此线路部署于Vercel" class="anno_content"><font color="#5ea6e5">fomal.cc</font></a>&nbsp;|&nbsp;<a href="https://www.fomal.cn" title="此线路部署于Vercel" class="anno_content"><font color="#5ea6e5">fomal.cn</font></a><br>--- 备用域名 ---<br><a href="https://netlify.fomal.cc" title="此线路部署于Netlify" class="anno_content"><font color="#5ea6e5">netlify.fomal.cc</font></a><br><a href="https://cloudflare.fomal.cc" title="此线路部署于Cloudflare" class="anno_content"><font color="#5ea6e5">cloudflare.fomal.cc</font></a><br>--- 网站安卓APP ---<br>🍧<a href="https://lskypro.acozycotage.net/Fomalhaut/Fomalhaut.apk" title="点这里可以下载网站的安卓APP" class="anno_content"><font color="#5ea6e5">点此下载</font></a>🍧</b></center>
+    content: <center>我是Dromara社区的一员并且是Stream-Query的Committer,热衷于Open Source。有什么疑问可以加我微信Cizai_讨论一些技术问题</center><br></br>Dromara 是由国内顶尖的开源项目作者共同组成的开源社区。提供包括分布式事务，流行工具，企业级认证，微服务RPC，运维监控，Agent监控，分布式日志，调度编排等一系列开源产品、解决方案与咨询、技术支持与培训认证服务。技术栈全面开源共建、 保持社区中立，致力于为全球用户提供微服务云原生解决方案。让参与的每一位开源爱好者，体会到开源的快乐。Dromara开源社区目前拥有10+GVP项目，总star数量超过十万，构建了上万人的开源社区，有成千上万的个人及团队在使用Dromara社区的开源项目。
   card_recent_post:
     enable: false
     limit: 3 # if set 0 will show all

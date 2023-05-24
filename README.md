@@ -173,7 +173,7 @@
     var dnum = Math.floor(days);
   
     var ascll = [
-      `欢迎来到Fomalhaut🥝の小家!`,
+      `欢迎来到Eliaukの小家!`,
       `Future is now 🍭🍭🍭`,
       `
           
@@ -226,7 +226,7 @@
     setTimeout(
       console.warn.bind(
         console,
-        "%c ⚡ Powered by Fomalhaut🥝 %c 你正在访问Fomalhaut🥝の小家",
+        "%c ⚡ Powered by Eliauk %c 你正在访问Eliaukの小家",
         "color:white; background-color:#f0ad4e",
         ""
       )
