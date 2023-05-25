@@ -16,18 +16,18 @@ menu:
   #  画廊: /box/gallery/ ||icon-tubiaozhizuomoban || faa-tada
   #  动画: /box/animation/ || icon-nvwumao || faa-tada
   #  网址导航: /box/nav/ || icon-zhifengche || faa-tada
-  #社交 || icon-shejiaoxinxi || faa-tada || hide:
+  社交 || icon-shejiaoxinxi || faa-tada || hide:
   #  朋友圈: /social/fcircle/ || icon-pengyouquan || faa-tada
-  #  留言板: /comments/ || icon-liuyan || faa-tada
+    留言板: /comments/ || icon-liuyan || faa-tada
   #  友人帐: /social/link/ || icon-lianjie || faa-tada
   #网站 || icon-wangye || faa-tada || hide:
   #  网站统计: /site/census/ || icon--tongjibiao || faa-tada
   #  文章统计: /site/echarts/ || icon-shujutongji1 || faa-tada
   #  旧时光: /site/time/ || icon-xianxingshalou || faa-tada
-  #个人 || icon-maoliang || faa-tada || hide:
-  #  唠叨: /personal/bb/ || icon-qunliaotian || faa-tada
-  #  恋爱小屋: /personal/love/ || icon-love-sign || faa-tada
-  #  关于: /personal/about/ || icon-paperplane || faa-tada
+  个人 || icon-maoliang || faa-tada || hide:
+    # 唠叨: /personal/bb/ || icon-qunliaotian || faa-tada
+    恋爱小屋: /personal/love/ || icon-love-sign || faa-tada
+    关于: /personal/about/ || icon-paperplane || faa-tada
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -908,6 +908,7 @@ inject:
     # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"> # 常规css
     - <link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"> # 引入组件库(f12)
     # 综合美化模块样式引入
+    - <link rel="stylesheet" href="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.7/tianli_gpt.css">
     - <style id="themeColor"></style> # 主题色
     - <style id="rightSide"></style> # 侧边栏
     - <style id="transPercent"></style> # 透明度调节
@@ -918,6 +919,8 @@ inject:
     - <style id="menu_shadow"></style> # 菜单发光样式
 
   bottom:
+    - <script>let tianliGPT_postSelector = '\#post \#article-container';let tianliGPT_key = 'yuX4gO26Mg3XKrzhjqA7';</script>
+    - <script src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.7/tianli_gpt.js"></script>
     - <script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script> # jQuery
     - <script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script> # VUE
     - <script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script> # ElementUI
