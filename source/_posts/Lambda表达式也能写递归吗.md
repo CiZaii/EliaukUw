@@ -4,8 +4,8 @@ date: '2022/8/26 23:12'
 swiper: true
 cover: >-
  https://zang-1307996497.cos.ap-beijing.myqcloud.com/6E751678A13E9E9F6A6A410DA02683FF.jpg
-img: >-
- https://zang-1307996497.cos.ap-beijing.myqcloud.com/6E751678A13E9E9F6A6A410DA02683FF.jpg
+top_img: >-
+ url(https://zang-1307996497.cos.ap-beijing.myqcloud.com/6E751678A13E9E9F6A6A410DA02683FF.jpg)
 categories: 开源
 
 tags:
