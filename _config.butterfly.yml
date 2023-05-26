@@ -12,12 +12,12 @@ menu:
   #  八音盒: /life/music/ ||icon-yinle || faa-tada
   #  影院: /life/movies/ ||icon-dianying1 || faa-tada
   #  游戏: /life/games/ || icon-youxishoubing || faa-tada
-  #八宝箱 || icon-xiangzi || faa-tada || hide:
-  #  画廊: /box/gallery/ ||icon-tubiaozhizuomoban || faa-tada
+  八宝箱 || icon-xiangzi || faa-tada || hide:
+    画廊: /box/gallery/ ||icon-tubiaozhizuomoban || faa-tada
   #  动画: /box/animation/ || icon-nvwumao || faa-tada
-  #  网址导航: /box/nav/ || icon-zhifengche || faa-tada
+    网址导航: /box/nav/ || icon-zhifengche || faa-tada
   社交 || icon-shejiaoxinxi || faa-tada || hide:
-  #  朋友圈: /social/fcircle/ || icon-pengyouquan || faa-tada
+    朋友圈: /social/fcircle/ || icon-pengyouquan || faa-tada
     留言板: /comments/ || icon-liuyan || faa-tada
   #  友人帐: /social/link/ || icon-lianjie || faa-tada
   #网站 || icon-wangye || faa-tada || hide:
