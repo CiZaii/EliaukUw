@@ -2,12 +2,15 @@
 title: Mysql8.0中的Json数据类型
 date: '2023/7/16 19:28'
 swiper: false
-cover: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/%E5%A5%B3%E7%A5%9E%E5%A5%8F%E9%B8%A3%E6%9B%B210k.jpg'
-img: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/%E5%A5%B3%E7%A5%9E%E5%A5%8F%E9%B8%A3%E6%9B%B210k.jpg'
+cover: >-
+  https://zang-1307996497.cos.ap-beijing.myqcloud.com/%E5%A5%B3%E7%A5%9E%E5%A5%8F%E9%B8%A3%E6%9B%B210k.jpg
+img: >-
+  https://zang-1307996497.cos.ap-beijing.myqcloud.com/%E5%A5%B3%E7%A5%9E%E5%A5%8F%E9%B8%A3%E6%9B%B210k.jpg
 categories: 实用
 tags:
   - MySQL
 top: true
+abbrlink: 9aeaf84b
 ---
 
 ## 场景
