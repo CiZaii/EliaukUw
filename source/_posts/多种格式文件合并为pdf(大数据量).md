@@ -2,8 +2,8 @@
 title: 多种格式文件合并为pdf(大数据量)
 date: '2023/7/15 19:28'
 swiper: false
-cover: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-72kejo.jpg'
-img: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-72kejo.jpg'
+cover: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/126db3_Smile-10k.jpg'
+img: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/126db3_Smile-10k.jpg'
 categories: 实用
 tags:
   - pdf
