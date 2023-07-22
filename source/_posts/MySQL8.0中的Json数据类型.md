@@ -62,6 +62,52 @@ abbrlink: 9aeaf84b
             "WHERE JSON_CONTAINS(a.machine_wording, JSON_OBJECT('uuid', :uuid));")
     void deleteJsonObjectByUuid(@Param("uuid") String uuid);
 ```
-> 上述machine_wording就是存放这个JsonArray的字段名称
-> 上述xxx就是表名
-> 通过json_table函数将JsonArray转换成一个表，然后通过where条件过滤掉uuid等于传入的uuid的JsonObject，然后通过json_arrayagg函数将过滤后的JsonObject转换成JsonArray，最后通过update语句将原来的JsonArray替换成过滤后的JsonArray
+> - 上述machine_wording就是存放这个JsonArray的字段名称
+> - 上述xxx就是表名
+> - 通过json_table函数将JsonArray转换成一个表，然后通过where条件过滤掉uuid等于传入的uuid的JsonObject，然后通过json_arrayagg函数将过滤后的JsonObject转换成JsonArray，最后通过update语句将原来的JsonArray替换成过滤后的JsonArray
+
+## 2323-07-22测试环境产生问题
+> 在测试环境中的时候对下边这个需求进行测试的时候产生了一些小问题
+> 根据UUID查询出对应的JsonObject并且将其删除，并保留该JsonArray的其他数据
+
+1. 首先使用我上边deleteJsonObjectByUuid方法时会在特殊环境下产生一些问题
+2. 出现问题的场景
+   当我们的machine_wording字段中的JsonArray中的JsonObject为一个的时候会出现删除不掉的问题
+3. 产生问题的原因是对应的sql是先找到UUID不等于传入的时候他就会拿到所有不等于的然后更新到这个字段中，相当于删掉了，所以当只有一个的时候他找不到然后没有办法更新上去，所以就会出现问题
+
+以下是我进行修改之后的方法
+```java
+
+@Modifying
+    @Transactional
+    @Query(nativeQuery = true, value = "UPDATE ai_sensitive_appraisal_file_ocr_post_artificial AS a " +
+            "SET a.mark_words = CASE WHEN (" +
+            "    SELECT JSON_ARRAYAGG(json_object) " +
+            "    FROM (" +
+            "        SELECT JSON_EXTRACT(a.mark_words, CONCAT('$[', jt.idx - 1, ']')) as json_object " +
+            "        FROM JSON_TABLE(" +
+            "            a.mark_words, " +
+            "            '$[*]' COLUMNS (" +
+            "                idx FOR ORDINALITY, " +
+            "                uuid VARCHAR(255) PATH '$.uuid'" +
+            "            )" +
+            "        ) AS jt " +
+            "        WHERE jt.uuid != :uuid" +
+            "    ) AS filtered_json_objects" +
+            ") IS NULL THEN '[]' ELSE (" +
+            "    SELECT JSON_ARRAYAGG(json_object) " +
+            "    FROM (" +
+            "        SELECT JSON_EXTRACT(a.mark_words, CONCAT('$[', jt.idx - 1, ']')) as json_object " +
+            "        FROM JSON_TABLE(" +
+            "            a.mark_words, " +
+            "            '$[*]' COLUMNS (" +
+            "                idx FOR ORDINALITY, " +
+            "                uuid VARCHAR(255) PATH '$.uuid'" +
+            "            )" +
+            "        ) AS jt " +
+            "        WHERE jt.uuid != :uuid" +
+            "    ) AS filtered_json_objects" +
+            ") END " +
+            "WHERE JSON_CONTAINS(a.mark_words, JSON_OBJECT('uuid', :uuid));")
+    void deleteBModelWord(@Param("uuid") String uuid);
+```
