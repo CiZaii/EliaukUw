@@ -1,5 +1,5 @@
 ---
-title: AQS万字解析
+title: ElasticSearch和Kibana配置
 date: '2023/7/27 22:12'
 swiper: true
 cover: >-
@@ -8,7 +8,7 @@ top_img: >-
   url(https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-yx2zd7.png)
 categories: ElasticSearch
 tags:
-  - 中间件
+  - docker-compose
 top: true
 abbrlink: be7fed04
 ---
