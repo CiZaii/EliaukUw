@@ -2,15 +2,13 @@
 title: ElasticSearch和Kibana配置
 date: '2023/9/7 23:20'
 swiper: true
-cover: >-
-  https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-yx2zd7.png
-top_img: >-
-  url(https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-yx2zd7.png)
+cover: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-yx2zd7.png'
+top_img: 'url(https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-yx2zd7.png)'
 categories: ElasticSearch
 tags:
   - docker-compose
 top: true
-abbrlink: be7fed04
+abbrlink: e81b0353
 ---
 
 ## ElasticSearch和Kibana配置
