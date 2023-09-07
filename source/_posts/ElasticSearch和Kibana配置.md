@@ -1,6 +1,6 @@
 ---
 title: ElasticSearch和Kibana配置
-date: '2023/7/27 22:12'
+date: '2023/9/7 23:20'
 swiper: true
 cover: >-
   https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-yx2zd7.png
