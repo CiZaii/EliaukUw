@@ -100,7 +100,7 @@ public void returnedMessage(Message message, int replyCode, String replyText, St
                "producer投递消息失败；报错信息: " + returnedMessage);
    noticeEvent.setTalkTypeEnum(DingTalkTypeEnum.BIZ_NOTICE);
    //发送消息投递失败事件，监听器方将信息发送至钉钉机器人群里或者是某个具体的人。
-   publisher.publishEvent(noticeEvent);
+   publisher.publishEvent(noticeEvent);      
 }
 ```
 
