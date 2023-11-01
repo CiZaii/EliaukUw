@@ -1,10 +1,9 @@
 ---
-title: 项目优雅的实现责任链模式
-description: "\U0001F967本文会介绍在项目中如何优雅的实现责任链模式"
+title: Git操作规约
 date: '2023-10-31 23:25'
 swiper: false
-cover: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/221347-16919360279c09.jpg'
-img: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/221347-16919360279c09.jpg'
+cover: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-qzowgr.png'
+img: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-qzowgr.png'
 categories: 开发规约
 tags:
   - 开发规约
