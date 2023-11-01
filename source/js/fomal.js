@@ -97,6 +97,27 @@ function getDistance(e1, n1, e2, n2) {
   return Math.round(r);
 }
 
+document.onkeydown = function () {
+  if (window.event && window.event.keyCode == 123) {
+    event.keyCode = 0;
+    event.returnValue = false;
+    new Vue({
+      data:function(){
+        this.$notify({
+          title:"啊啊！你干嘛啊！",
+          message:"怎么能随随便便想扒猹的底裤呢？坏！",
+          position: 'bottom-right',
+          offset: 50,
+          showClose: false,
+          type:"error"
+        });
+        return{visible:false}
+      }
+    })
+    return false;
+  }
+};
+
 function showWelcome() {
 
   let dist = getDistance(113.34499552, 23.15537143, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
@@ -365,24 +386,24 @@ document.addEventListener("copy", function () {
 // f12提醒但不禁用
 document.onkeydown = function (e) {
   if (123 == e.keyCode || (e.ctrlKey && e.shiftKey && (74 === e.keyCode || 73 === e.keyCode || 67 === e.keyCode)) || (e.ctrlKey && 85 === e.keyCode)) {
+    e.preventDefault();
     debounce(function () {
       new Vue({
-        data: function () {
+        data:function(){
           this.$notify({
-            title: "你已被发现😜",
-            message: "小伙子，扒源记住要遵循GPL协议！",
+            title:"啊啊！你干嘛啊！",
+            message:"怎么能随随便便想扒俺的底裤呢？坏！",
             position: 'top-left',
             offset: 50,
-            showClose: true,
-            type: "warning",
-            duration: 5000
+            showClose: false,
+            type:"error"
           });
         }
       })
     }, 300);
   }
 };
-/* 禁用f12与按键防抖 end */
+/* 禁用f12 end */
 
 //----------------------------------------------------------------
 
@@ -1172,7 +1193,7 @@ function createtime2() {
   setTimeout(
     console.warn.bind(
       console,
-      "%c ⚡ Powered by Eliauk %c 你正在访问Fomalhaut🥝の小家",
+      "%c ⚡ Powered by Eliauk %c 你正在访问Eliauk🥝の小家",
       "color:white; background-color:#f0ad4e",
       ""
     )
