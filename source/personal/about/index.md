@@ -7,6 +7,6 @@ date: 2022-08-10 16:05:11
 
 ## 我的简历🎬
 
-{% pdf https://zang-1307996497.cos.ap-beijing.myqcloud.com/Eliauk%E7%9A%84%E7%AE%80%E5%8E%86.pdf %}
+{% pdf https://zang-1307996497.cos.ap-beijing.myqcloud.com/about.pdf %}
 
 
