@@ -51,12 +51,15 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  # Github: https://github.com/fomalhaut1998 || icon-github || faa-tada
-  微信: /assets/QRCode.jpg || icon-weixin || faa-tada
+  Github: https://gitee.com/EliaukU || icon-github || faa-tada
+  #微信: /assets/QRCode.jpg || icon-weixin || faa-tada
   QQ: https://res.abeim.cn/api/qq/?qq=2556450572 || icon-QQ || faa-tada
   B站: https://space.bilibili.com/33068730 || icon-bilibili || faa-tada
-  QQ邮箱: mailto:2556450572@qq.com || icon-youxiang || faa-tada
+  QQ邮箱: mailto:zang@dromara.org || icon-youxiang || faa-tada
   力扣: https://leetcode.cn/u/fomalhaut1998 || icon-leetcode || faa-tada
+  # 微博: https://weibo.com/u/6473136435 || icon-weibo || faa-tada
+  # 知乎: https://www.zhihu.com/people/liang-jia-chao-19 || icon-shejiaotubiao-10 || faa-tada
+  # RSS: /atom.xml || icon-RSS || faa-tada
   # 微博: https://weibo.com/u/6473136435 || icon-weibo || faa-tada
   # 知乎: https://www.zhihu.com/people/liang-jia-chao-19 || icon-shejiaotubiao-10 || faa-tada
   # RSS: /atom.xml || icon-RSS || faa-tada
