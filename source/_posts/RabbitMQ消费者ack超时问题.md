@@ -9,7 +9,7 @@ top_img: >-
 categories: RabbitMQ
 tags:
   - 真实项目
-abbrlink: e5894e26
+abbrlink: e5894e20
 ---
 
 {% tip error %}### 报错信息{% endtip %}
