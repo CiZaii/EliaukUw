@@ -70,113 +70,92 @@ function handleSendEvent(){
 
 /**
  * 处理与OpenAI API的实时交互，并通过Server-Sent Events (SSE) 返回数据。
- * 此方法设置一个SseEmitter用于发送实时响应，并通过异步方式处理OpenAI API的请求。
- * 
+ *
  * @param message 用户发送的消息
- * @return SseEmitter 用于向客户端发送实时数据
+ * @return SseEmitter 用于发送实时事件
+ * @throws Exception 如果在处理请求时发生异常
  */
 @GetMapping(value = "/api/chatgpt/test", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-public SseEmitter testChatGpt(@RequestParam String message) {
-    // 创建一个长时间运行的SseEmitter实例
+public SseEmitter testChatGpt(@RequestParam String message) throws Exception {
+
+    // 创建一个SseEmitter实例，超时时间设置为无限
     final SseEmitter emitter = new SseEmitter(Long.MAX_VALUE);
 
-    // 使用CompletableFuture在单独的线程中异步执行任务
-    CompletableFuture.runAsync(() -> {
+    // 使用线程池执行任务
+    executorService.execute(() -> {
+        // 构建与OpenAI API通信的请求
+        CompletionRequest request = CompletionRequest.builder()
+                .stream(true)
+                .messages(Collections.singletonList(Message.builder().role(CompletionRequest.Role.USER).content(message).build()))
+                .model(CompletionRequest.Model.CHATGLM_TURBO.getCode())
+                .build();
+
+        // 创建一个CountDownLatch以等待异步操作完成
+        CountDownLatch countDownLatch = new CountDownLatch(1);
+
+        // 尝试发送请求并处理响应
         try {
-            // 处理与OpenAI的交互逻辑
-            handleOpenAiRequest(message, emitter);
+            openAiSession.completions(request, new EventSourceListener() {
+                @Override
+                public void onEvent(EventSource eventSource, @Nullable String id, @Nullable String type, String data) {
+                    // 检查是否收到完成标记
+                    if ("[DONE]".equalsIgnoreCase(data)) {
+                        log.info("OpenAI 应答完成");
+                        return;
+                    }
+
+                    // 解析OpenAI的响应
+                    CompletionResponse chatCompletionResponse = JSON.parseObject(data, CompletionResponse.class);
+                    List<ChatChoice> choices = chatCompletionResponse.getChoices();
+                    for (ChatChoice chatChoice : choices) {
+                        Message delta = chatChoice.getDelta();
+                        // 忽略助理的角色消息
+                        if (CompletionRequest.Role.ASSISTANT.getCode().equals(delta.getRole())) continue;
+
+                        // 检查是否应该结束响应
+                        String finishReason = chatChoice.getFinishReason();
+                        if (StringUtils.isNoneBlank(finishReason) && "stop".equalsIgnoreCase(finishReason)) {
+                            return;
+                        }
+                        try {
+                            // 向客户端发送数据
+                            emitter.send(data);
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                        log.info("测试结果：{}", delta.getContent());
+                    }
+                }
+
+                @Override
+                public void onClosed(EventSource eventSource) {
+                    log.info("对话完成");
+                    emitter.complete(); // 确保SSE流被正确关闭
+                    countDownLatch.countDown();
+                }
+
+                @Override
+                public void onFailure(EventSource eventSource, @Nullable Throwable t, @Nullable Response response) {
+                    // 在发生错误时完成SSE流并记录错误
+                    emitter.completeWithError(t);
+                    log.info("对话异常");
+                    countDownLatch.countDown();
+                }
+            });
         } catch (Exception e) {
-            // 如果发生异常，通过SseEmitter传递错误信息
-            emitter.completeWithError(e);
+            throw new RuntimeException(e);
         }
-    }, executorService);
+
+        try {
+            // 等待直到对话完成
+            countDownLatch.await();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    });
 
     return emitter;
 }
 
-/**
- * 构建与OpenAI API通信的请求并处理响应。
- * 该方法负责创建请求对象并注册事件监听器来处理API响应。
- *
- * @param message 用户输入的消息内容
- * @param emitter SseEmitter实例用于发送数据到客户端
- * @throws Exception 如果请求过程中发生异常
- */
-private void handleOpenAiRequest(String message, SseEmitter emitter) throws Exception {
-    // 构建请求对象
-    CompletionRequest request = buildCompletionRequest(message);
-
-    // 向OpenAI发送请求并处理响应
-    openAiSession.completions(request, createEventSourceListener(emitter));
-}
-
-/**
- * 构建与OpenAI交互的请求对象。
- * 此方法根据用户输入的消息创建请求对象。
- * 
- * @param message 用户输入的消息
- * @return 构建好的CompletionRequest对象
- */
-private CompletionRequest buildCompletionRequest(String message) {
-    // 返回构建好的请求对象
-    return CompletionRequest.builder()
-            .stream(true)
-            .messages(Collections.singletonList(Message.builder().role(CompletionRequest.Role.USER).content(message).build()))
-            .model(CompletionRequest.Model.CHATGLM_TURBO.getCode())
-            .build();
-}
-
-/**
- * 创建用于处理OpenAI API响应的事件监听器。
- * 此监听器处理从OpenAI API接收到的所有事件，并通过SseEmitter发送数据到客户端。
- * 
- * @param emitter SseEmitter实例用于发送实时数据
- * @return EventSourceListener 事件监听器
- */
-private EventSourceListener createEventSourceListener(SseEmitter emitter) {
-    return new EventSourceListener() {
-        @Override
-        public void onEvent(EventSource eventSource, @Nullable String id, @Nullable String type, String data) {
-            if ("[DONE]".equalsIgnoreCase(data)) {
-                log.info("OpenAI 应答完成");
-                return;
-            }
-
-            CompletionResponse chatCompletionResponse = JSON.parseObject(data, CompletionResponse.class);
-            List<ChatChoice> choices = chatCompletionResponse.getChoices();
-            for (ChatChoice chatChoice : choices) {
-                Message delta = chatChoice.getDelta();
-                if (CompletionRequest.Role.ASSISTANT.getCode().equals(delta.getRole())) continue;
-
-                // 应答完成
-                String finishReason = chatChoice.getFinishReason();
-                if (StringUtils.isNoneBlank(finishReason) && "stop".equalsIgnoreCase(finishReason)) {
-                    return;
-                }
-                try {
-                    emitter.send(data);
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-                log.info("测试结果：{}", delta.getContent());
-            }
-        }
-
-        @Override
-        public void onClosed(EventSource eventSource) {
-            // 当事件源关闭时，确保SSE流也被关闭
-            emitter.complete(); 
-            // 关闭事件源
-            eventSource.close();
-        }
-
-        @Override
-        public void onFailure(EventSource eventSource, @Nullable Throwable t, @Nullable Response response) {
-            // 在发生错误时，通过SseEmitter传递错误信息并关闭事件源
-            emitter.completeWithError(t);
-            eventSource.close();
-        }
-    };
-}
 
 ```
