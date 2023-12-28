@@ -2823,9 +2823,9 @@ function createtime() {
     snum = Math.round(seconds);
   1 == String(snum).length && (snum = "0" + snum);
   let currentTimeHtml = "";
-  (currentTimeHtml = `<a style="font-size:13px;font-weight:bold; href: https://beian.miit.gov.cn/" >冀ICP备2021027944号-2</a>`)
-    document.getElementById("workboard") &&
-    (document.getElementById("workboard").innerHTML = currentTimeHtml);
+  currentTimeHtml = `<a style="font-size:13px; font-weight:bold;" href="https://beian.miit.gov.cn/">冀ICP备2021027944号-2</a>`;
+  document.getElementById("workboard") && (document.getElementById("workboard").innerHTML = currentTimeHtml);
+
 }
 // 设置重复执行函数，周期1000ms
 setInterval(() => {
