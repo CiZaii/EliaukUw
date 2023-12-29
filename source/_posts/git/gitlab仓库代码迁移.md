@@ -9,6 +9,7 @@ top_img: >-
 categories: gitlab
 tags:
   - 小技巧
+abbrlink: 683dabc3
 ---
 
 ## 1、导出仓库数据

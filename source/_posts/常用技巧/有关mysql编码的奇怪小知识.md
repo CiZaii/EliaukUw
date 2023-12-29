@@ -1,6 +1,6 @@
 ---
 title: 有关mysql编码的奇怪小知识
-description: '有关mysql编码的奇怪小知识'
+description: 有关mysql编码的奇怪小知识
 date: '2023-12-03 22:51'
 swiper: false
 cover: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-jxl56w.png'
@@ -8,7 +8,7 @@ img: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-jxl56w.png'
 categories: 数据库
 tags:
   - mysql
-
+abbrlink: 30e1d389
 ---
 
 当我们数据库User表中有一条数据的name='Zang'时，我们执行查询语句

@@ -10,6 +10,7 @@ tags:
 top: true
 sticky: 2
 swiper_index: 2
+abbrlink: 9cac72b9
 ---
 
 ## 1、部署FolkMQ
