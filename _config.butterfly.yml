@@ -546,7 +546,7 @@ tag_ui: # 留空或 index
 # "#e4f4f6" "#efefef"
 background:
   #【必选】默认背景 
-  default: url(https://zang-1307996497.cos.ap-beijing.myqcloud.com/wallhaven-ex9gwo.png)
+  default: url(https://zang-1307996497.cos.ap-beijing.myqcloud.com/undefinedhome_bg.webp)
   #【可选】PC端夜间模式背景 
   darkmode: var(--darkmode-bg)
   #【可选】移动端日间默认背景 

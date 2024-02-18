@@ -7,9 +7,6 @@ img: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/172633-1702200393f13a.
 categories: chat
 tags:
   - AI
-top: true
-sticky: 2
-swiper_index: 2
 abbrlink: a0c3992a
 ---
 
