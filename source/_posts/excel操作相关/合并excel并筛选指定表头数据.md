@@ -2,13 +2,16 @@
 title: 合并excel并筛选指定表头数据
 date: '2024-2-28 23:25'
 swiper: false
-cover: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/undefined20240228130054.png'
-img: 'https://zang-1307996497.cos.ap-beijing.myqcloud.com/undefined20240228130054.png'
+cover: >-
+  https://zang-1307996497.cos.ap-beijing.myqcloud.com/undefined20240228130054.png
+img: >-
+  https://zang-1307996497.cos.ap-beijing.myqcloud.com/undefined20240228130054.png
 categories: 开源
 tags:
   - excel
 sticky: 2
 swiper_index: 2
+abbrlink: 3a2a4cae
 ---
 
 ## 1、需求
