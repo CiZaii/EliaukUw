@@ -8,7 +8,7 @@ date: 2022-08-10 16:05:11
 
 ## 我的简历🎬
 
-{% pdf https://zang-1307996497.cos.ap-beijing.myqcloud.com/%E8%87%A7xx%E7%AE%80%E5%8E%86%20--%20Java%E5%BC%80%E5%8F%91.pdf %}
+{% pdf  %}
 
 
 
