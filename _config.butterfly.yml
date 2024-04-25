@@ -912,6 +912,7 @@ inject:
     - <script src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script>
     - <link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css">
     - <script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script>
+
     # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"> # 常规css
     - <link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"> # 引入组件库(f12)
     # 综合美化模块样式引入
@@ -924,8 +925,9 @@ inject:
     - <span id="fps"></span> # 帧率检测
     - <style id="defineBg"></style> # 自定义背景选项
     - <style id="menu_shadow"></style> # 菜单发光样式
-
+    - <script src="/js/ai.js"></script>
   bottom:
+
     - <script src="/js/bandev.js"></script> # 主模块js
     - <script  data-pjax="" defer="">let tianliGPT_postSelector = '\#post \#article-container';let tianliGPT_key = 'yuX4gO26Mg3XKrzhjqA7';</script>
     - <script src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.15.2/tianli_gpt.js" data-pjax="" defer=""></script>
@@ -943,6 +945,8 @@ inject:
     - <canvas id="universe"></canvas> # 星空画布
     - <canvas id="snow"></canvas> # 雪花画布
     - <script defer src="/js/fomal.js"></script> # 主模块js
+
+
 
 # CDN
 # Don't modify the following settings unless you know how they work

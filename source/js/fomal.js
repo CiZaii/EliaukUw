@@ -5,6 +5,7 @@ document.addEventListener('pjax:complete', function () {
 document.addEventListener('DOMContentLoaded', function () {
   window.onscroll = percent;
 });
+
 // 页面百分比
 function percent() {
 
