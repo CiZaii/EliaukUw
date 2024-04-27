@@ -928,7 +928,7 @@ inject:
     - <script src="/js/ai.js"></script>
   bottom:
 
-    - <script src="/js/bandev.js"></script> # 主模块js
+#    - <script src="/js/bandev.js"></script> # 主模块js
     - <script  data-pjax="" defer="">let tianliGPT_postSelector = '\#post \#article-container';let tianliGPT_key = 'yuX4gO26Mg3XKrzhjqA7';</script>
     - <script src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.15.2/tianli_gpt.js" data-pjax="" defer=""></script>
     - <script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script> # jQuery
@@ -945,6 +945,8 @@ inject:
     - <canvas id="universe"></canvas> # 星空画布
     - <canvas id="snow"></canvas> # 雪花画布
     - <script defer src="/js/fomal.js"></script> # 主模块js
+    - <script defer src="/js/global.js"></script> #
+    - <script src="https://udify.app/embed.min.js" id="AkA0u9rvIQq7a31h" defer></script>
 
 
 
