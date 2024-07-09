@@ -1,1 +1,1 @@
-window.difyChatbotConfig = {token: 'AkA0u9rvIQq7a31h'}
+window.difyChatbotConfig = {token: '4dk8oM4z8aXmV0B7'}
